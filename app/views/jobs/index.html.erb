@@ -1,4 +1,3 @@
-<h1>Emprego Já</h1>
 <section id="jobs">
 <% @jobs.each do |job| %>
   <div>
@@ -7,6 +6,7 @@
       <%= job.location %><br>
       <%= job.company %>
     </p>
+    <%= link_to 'Ver mais', job_path(job) %>
   </div>
 <% end %>
 </section>
