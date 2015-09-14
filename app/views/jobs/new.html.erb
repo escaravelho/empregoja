@@ -10,5 +10,7 @@
   <%= f.text_field :category %>
   <%= f.label :description %>
   <%= f.text_area :description %>
+  <%= check_box_tag(:featured) %>
+  <%= label_tag(:featured, "Featured") %>
   <%= f.submit 'Criar Vaga' %>
 <% end %>
