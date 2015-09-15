@@ -1,5 +1,4 @@
 class Job < ActiveRecord::Base
-  def featured?
-    featured
-  end
+
+  belongs_to :company
 end

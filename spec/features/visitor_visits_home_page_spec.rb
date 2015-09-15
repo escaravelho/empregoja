@@ -16,7 +16,7 @@ feature 'Visitor visits Emprego Ja home page' do
                category: 'Desenvolvedor',
                description: 'Dev Junior Rails com ao menos um projeto',
                location: 'São Paulo',
-               company_id: company.id)
+               company: company)
 
     visit root_path
     expect(page).to have_content('Vaga de Dev')
