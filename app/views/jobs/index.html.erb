@@ -9,5 +9,13 @@
       <%= link_to 'Ver mais', job %>
     </p>
   </div>
-<% end %>
+  <% end %>
+  <h2>Empresas</h2>
+  <% @companies.each do |company| %>
+  <div>
+      <p>
+        <%= link_to company.name, company %>
+      </p>
+    </div>
+  <% end %>
 </section>
