@@ -1,5 +1,7 @@
 <h1><%= @job.title %></h1>
-<p>
+  <% if @job.expired? %>
+    <p color=red>Vaga Expirada!</p>
+  <% end %>
   <%= @job.company.name if @job.company %><br>
   <%= @job.location %><br>
   <%= @job.category.name %><br>
@@ -7,4 +9,3 @@
   <% if @job.featured? %>
     <strong>Vaga em Destaque</strong>
   <% end %>
-</p>

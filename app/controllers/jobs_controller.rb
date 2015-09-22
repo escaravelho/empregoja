@@ -7,6 +7,9 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    if @job.expired?
+      "Vaga Expirada!"
+    end
   end
 
   def new
