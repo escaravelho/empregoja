@@ -1,5 +1,8 @@
 <h1>Emprego Já</h1>
 <h2><%= @company.name %></h2>
+<p><% if @company.premium? %></p>
+  <p>Empresa Premium</p>
+  <% end %>
 <p>
   <%= @company.location %><br>
   <%= @company.phone %><br>

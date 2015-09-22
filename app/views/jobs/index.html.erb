@@ -15,6 +15,7 @@
 <aside>
   <% @companies.each do |company| %>
     <%= link_to company.name, company %>
+    <p><%= 'Empresa Premium' if company.premium? %></p>
   <% end %>
 </aside>
 <aside>
