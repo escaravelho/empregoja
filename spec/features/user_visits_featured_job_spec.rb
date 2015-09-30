@@ -2,19 +2,12 @@ require 'rails_helper'
 
 feature 'User visits featured job' do
   scenario 'successfully' do
-    company = Company.create name: "HE:Labs",
-                         phone: "1192928556",
-                         mail: "he@helabs.com.br",
-                         location: "Rio de Janeiro"
 
-    category = Category.create name: "Desenvolvimento de Software"
+    company = create(:company)
 
-    job = Job.create title: "Desenvolvedor Rails",
-                         location: "Rio de Janeiro",
-                         company: company,
-                         category: category,
-                         description: "Vaga para desenvolvimento remoto.",
-                         featured: true
+    category = create(:category)
+
+    job = create(:job)
 
     visit job_path(job)
 
