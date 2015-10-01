@@ -2,14 +2,12 @@ require 'rails_helper'
 
 describe Job do
   it 'is recent' do
-
     job = create(:job)
 
     expect(job).to be_recent
   end
 
   it 'is not recent' do
-
     job = nil
 
     travel_to 20.days.ago do
@@ -20,7 +18,6 @@ describe Job do
   end
 
   it 'is expired' do
-
     job = nil
 
     travel_to 120.days.ago do
@@ -31,7 +28,6 @@ describe Job do
   end
 
   it 'is not expired' do
-
     job = nil
 
     travel_to 20.days.ago do
